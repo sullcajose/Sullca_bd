@@ -1,0 +1,17 @@
+CREATE DATABASE SULLCA_BD;
+
+USE SULLCA_BD;
+
+
+CREATE table inscripciones(
+estudianteid int,
+materiacodigo int,
+foreign key (estudianteid) references estudiante(id),
+foreign key (materiacodigo) references materias(codigo)
+);
+
+select * from inscripciones; 
+
+insert into inscripciones(estudianteid,materiacodigo) values(1,2);
+ 
+delete from materias where codigo = 4;
